@@ -33,7 +33,7 @@ async def af(e):
     wt = await e.get_reply_message()
     chat = e.chat_id
     if not (wt and wrd):
-        return await eor(e, "`Use this command word to set as filter and reply...`")
+        return await eor(e, "`Use this command word to set as filter and reply...` - @iqthon")
     try:
         rem_filter(int(chat), wrd)
     except:
@@ -68,9 +68,9 @@ async def rf(e):
     wrd = e.pattern_match.group(1)
     chat = e.chat_id
     if not wrd:
-        return await eor(e, "`Give the filter to remove..`")
+        return await eor(e, "`Give the filter to remove..` - @iqthon")
     rem_filter(int(chat), wrd)
-    await eor(e, f"Done : Filter `{wrd}` Removed.")
+    await eor(e, f"Done : Filter `{wrd}` Removed. -@iqthon")
 
 
 @ultroid_cmd(pattern="listfilter$")
@@ -80,7 +80,7 @@ async def lsnote(e):
         sd = "Filters Found In This Chats Are\n\n"
         await eor(e, sd + x)
     else:
-        await eor(e, "No Filters Found Here")
+        await eor(e, "No Filters Found Here -@iqthon")
 
 
 @ultroid_bot.on(events.NewMessage())
